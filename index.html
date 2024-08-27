@@ -1,12 +1,64 @@
 <!DOCTYPE html>
+
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador de Texto</title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
-    
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Challenge - Encriptador de texto</title>
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+
+    <body>
+        <header class="header">
+
+            <nav class="header_menu">
+                <a class="header_menu_link">
+                    <img class="logo" src="./assets/Logo.png" alt="Logo de Alura">
+                </a>
+            </nav>
+
+        </header>
+
+        <main class="work_area">
+            <section class="work_area_input">
+                
+                <!--<h1 class="text_area_title">Ingrese el texto aquí</h1>-->
+
+                <textarea class="input_text" cols="30" rows="10" placeholder="Ingrese el texto aquí" autofocus></textarea>
+
+                <div class="restriction_area">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2"/></svg>
+                    <p class= "restriction_area_title">Solo letras minúsculas y sin acentos.</p>
+                </div>
+
+                <div class="buttons">
+                    <button name="btn_encrypt" class="btn_encrypt" onclick="encrypt()">Encriptar</button>
+                    <button name="btn_decrypt" class="btn_decrypt" onclick="decrypt()">Desencriptar</button>
+                </div>
+
+            </section>
+
+            <section class="work_area_output">
+
+                <textarea class="output_text" cols="20" rows="10" disabled></textarea>
+
+                
+                <div class="dynamic_output">
+                    <h2 class="message_notfound_title">Ningún mensaje fue encontrado</h2>
+                    <h3 class="message_notfound_subtitle">Ingresa el texto que desees encriptar o desencriptar.</h3>
+                    <button name="btn_copy" class="btn_copy" onclick="copy()" style="display: none;"><span class="message"></span>Copiar</button>
+                </div>
+                
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Desarollado por Gerardo Sanchez</p>
+        </footer>
+            
+    </body>
+
+    <script src="script.js"></script>
+
 </html>

@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*Variables*/
+:root{
+    --primary-color: #000000;
+    --secondary-color: #0A3871;
+    --background-color: #E5E5E5;
+    --font-inter:  "Inter", sans-serif;
+    --background-btn: #D8DFE8;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-inter);
+}
+
+
+body{
+    background-color: var(--background-color);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Hace que el cuerpo tenga al menos la altura de la ventana */
+}
+
+
+.header{
+    padding: 2% 0% 0% 2%;
+}
+
+.header_menu{
+    display: flex;
+}
+
+.header_menu_link{
+    width: 120px;
+    height: 48px;
+}
+
+
+.work_area{
+    display: flex;
+    align-items: center;
+    padding: 0% 3% 0% 15%;
+    justify-content: space-between;
+    gap: 120px;
+    flex: 1;
+
+}
+
+.work_area_input{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-content: space-between;
+}
+
+.text_area_title{
+    font-size: 2.25rem;
+    color: #0A3871;
+    font-weight: 400;
+}
+
+.input_text{
+    height: 400px;
+    border: none;
+    font-size: 2.25rem;
+    background-color: var(--background-color);
+    resize: none;
+    color: #0A3871;
+    font-weight: 400;
+    
+}
+
+.input_text::placeholder{
+    color: #0A3871;
+}
+
+.restriction_area{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+
+.restriction_area_title{
+    color: #495057;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between; 
+    align-items: stretch; 
+}
+
+.buttons button {
+    flex: 1; /* Hace que ambos botones ocupen el mismo ancho */
+    margin: 8px; /* Añade un pequeño margen para separar los botones */
+    border-radius: 24px;
+    height: 67px;
+    border: 1px solid var(--secondary-color);
+    font-size: 1rem;
+
+}
+
+.btn_encrypt{
+    background: var(--secondary-color);
+    color: white;
+}
+
+.btn_decrypt{
+    background: var(--background-btn);
+    color: var(--secondary-color);
+}
+
+
+/*output_area_output*/
+
+.work_area_output{
+    width: 25%;
+    display: flex;
+    resize: none;
+    flex-direction: column;
+    align-content: space-between;
+    gap: 24px;
+    padding: 0 0 32px 0;
+    height: 650px;
+    background: white;
+    background-image: url('../assets/notext.png'); 
+    background-repeat: no-repeat;
+    /*background-position: center center;*/
+    
+    border: none;
+    border-radius: 32px;
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.output_text{
+    height: 100%;
+    background-color: transparent;
+    font-size: 1.5rem;
+    resize: none;
+    color: #0A3871;
+    font-weight: 400;
+    padding: 5%;
+    border: none;
+}
+
+.dynamic_output{
+    position: relative;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0% 10%;
+}
+
+.message_notfound_title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.message_notfound_subtitle{
+   color: #495057; 
+   font-size: 1rem;
+   text-align: center;
+
+}
+
+.btn_copy{
+    border-radius: 24px;
+    height: 67px;
+    width: 80%;
+    border: 1px solid var(--secondary-color);
+    font-size: 1rem;
+    background: transparent;
+    color: var(--secondary-color);
+
+    position: absolute; /* Posiciona el botón de manera absoluta */
+    bottom: 10px; /* Ancla el botón a 10px del fondo */
+    left: 50%; /* Centra horizontalmente el botón */
+    transform: translateX(-50%);
+}
+
+.footer{
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    color: var(--background-color);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px){
+
+    .header{
+        padding: 10%;
+    }
+
+    .work_area{
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .work_area_input{
+        width: 100%;
+    }
+
+    .work_area_output{
+        width: 100%;
+       
+    }
+    .output_text{
+        height: 100%;
+    }
+}
